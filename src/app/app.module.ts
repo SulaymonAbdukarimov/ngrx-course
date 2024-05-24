@@ -53,6 +53,7 @@ const routes: Routes = [
     MatListModule,
     MatToolbarModule,
     AuthModule.forRoot(),
+
     StoreModule.forRoot(reducers, {
       metaReducers: metaReducers,
       runtimeChecks: {
@@ -62,6 +63,7 @@ const routes: Routes = [
         strictActionSerializability: true,
       }
     }),
+
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot({
